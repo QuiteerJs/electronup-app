@@ -5,6 +5,6 @@
   },
   "include": [
     "electronup.config.ts",
-    "main"
+    "main/*.ts"
   ]
 }
