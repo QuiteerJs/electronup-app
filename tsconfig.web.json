@@ -1,0 +1,6 @@
+{
+  "extends": "@quiteer/ts-config/tsconfig.web.json",
+  "include": [
+    "render"
+  ]
+}
