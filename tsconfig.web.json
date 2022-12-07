@@ -1,5 +1,8 @@
 {
   "extends": "@quiteer/ts-config/tsconfig.web.json",
+  "compilerOptions": {
+    "composite": true
+  },
   "include": [
     "render"
   ]

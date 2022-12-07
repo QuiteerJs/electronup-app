@@ -2,28 +2,29 @@
   "name": "electronup-admin",
   "version": "1.0.0",
   "description": "electronup 生态",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "quiteer",
+  "license": "MIT",
+  "homepage": "https://github.com/TaiAiAc/electronup-app#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TaiAiAc/electronup-admin.git"
+    "url": "git+https://github.com/TaiAiAc/electronup-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/TaiAiAc/electronup-app/issues"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/TaiAiAc/electronup-admin/issues"
+  "main": "dist/electron.js",
+  "scripts": {
+    "dev": "electronup -h",
+    "postinstall": "electron-builder install-app-deps"
   },
-  "homepage": "https://github.com/TaiAiAc/electronup-admin#readme",
+  "dependencies": {},
   "devDependencies": {
+    "@quiteer/electronup": "^0.2.2",
     "@quiteer/eslint-config": "^0.0.3",
+    "@quiteer/ts-config": "^0.0.3",
     "electron": "^22.0.0",
     "eslint": "^8.28.0",
     "vue": "^3.2.41"
-  },
-  "dependencies": {
-    "@quiteer/electronup": "^0.2.0"
   }
 }
