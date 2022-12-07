@@ -1,2 +1,2 @@
-# electronup-admin
+# electronup-app
 electronup 生态
