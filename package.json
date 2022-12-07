@@ -14,12 +14,12 @@
   },
   "main": "dist/electron.js",
   "scripts": {
-    "dev": "electronup -h",
+    "dev": "electronup -c build/electronup.config.ts",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {},
   "devDependencies": {
-    "@quiteer/electronup": "^0.2.2",
+    "@quiteer/electronup": "^0.2.11",
     "@quiteer/eslint-config": "^0.0.3",
     "@quiteer/ts-config": "^0.0.3",
     "electron": "^22.0.0",

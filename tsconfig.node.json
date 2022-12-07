@@ -4,7 +4,8 @@
     "composite": true
   },
   "include": [
-    "electronup.config.ts",
-    "main/*.ts"
+    "build/*.ts",
+    "main/*.ts",
+    "./package.json"
   ]
 }
