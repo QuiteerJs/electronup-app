@@ -4,8 +4,8 @@
     "composite": true
   },
   "include": [
-    "build/*.ts",
-    "main/*.ts",
+    "build/**/*.ts",
+    "main/**/*.ts",
     "./package.json"
   ]
 }

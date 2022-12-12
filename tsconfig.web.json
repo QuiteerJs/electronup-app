@@ -4,7 +4,7 @@
     "composite": true
   },
   "include": [
-    "render/*.ts",
+    "render/**/*.ts",
     "typings/*.d.ts"
   ]
 }
