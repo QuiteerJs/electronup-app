@@ -1,9 +1,18 @@
 import { BrowserWindow, app } from 'electron'
 import { getLoadUrl } from '@quiteer/electronup'
+import { Ipc } from '@quiteer/electron-ipc'
+import preload from '@quiteer/electron-preload'
 
 app.whenReady().then(() => {
+  Ipc.init()
+
   const win = new BrowserWindow({
-    height: 700, width: 1000
+    height: 700,
+    width: 1000,
+    webPreferences: {
+      sandbox: false,
+      preload: preload as string
+    }
   })
 
   const loadUrl = getLoadUrl(process.env.NODE_ENV!, process.env.RENDER_PORT!)

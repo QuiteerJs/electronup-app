@@ -8,7 +8,8 @@ declare module '*.vue' {
 }
 
 declare interface ImportMetaEnv {
-  readonly VITE_BASE_URL: string
+  readonly VITE_MODE_TEXT: string
+  readonly VITE_HELLO: string
 }
 
 declare interface ImportMeta {
@@ -27,6 +28,8 @@ declare const PROJECT_BUILD_TIME: string
 declare namespace NodeJS {
   export interface ProcessEnv {
     readonly NODE_ENV: 'development' | 'production'
-    readonly RENDER_PORT: string
+    readonly RENDER_PORT?: string
+    readonly VITE_HELLO: string
+    readonly VITE_MODE_TEXT: string
   }
 }

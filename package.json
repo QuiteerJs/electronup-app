@@ -15,17 +15,22 @@
   "main": "dist/electron.js",
   "scripts": {
     "dev": "electronup -c build/electronup.config.ts",
+    "build": "electronup build -c build/electronup.config.ts",
+    "dep:upgrade": "yarn upgrade-interactive --latest",
     "postinstall": "electron-builder install-app-deps"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@quiteer/electron-preload": "^0.0.8"
+  },
   "devDependencies": {
-    "@quiteer/electronup": "^0.2.12",
+    "@quiteer/electron-ipc": "^0.1.0",
+    "@quiteer/electronup": "^0.3.1",
     "@quiteer/eslint-config": "^0.0.3",
-    "@quiteer/ts-config": "^0.0.3",
+    "@quiteer/ts-config": "^0.0.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "electron": "^22.0.0",
-    "eslint": "^8.28.0",
+    "eslint": "^8.29.0",
     "unplugin-vue-macros": "^1.0.3",
     "vue": "^3.2.41"
   }
