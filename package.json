@@ -12,19 +12,20 @@
   "bugs": {
     "url": "https://github.com/TaiAiAc/electronup-app/issues"
   },
-  "main": "dist/electron.js",
+  "main": "dist/resource/electron.js",
   "scripts": {
     "dev": "electronup -c build/electronup.config.ts",
     "build": "electronup build -c build/electronup.config.ts",
-    "dep:upgrade": "yarn upgrade-interactive --latest",
-    "postinstall": "electron-builder install-app-deps"
+    "build:option": "electronup build -c build/electronup.config.ts -o",
+    "postinstall": "electron-builder install-app-deps",
+    "dep:upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
+    "@quiteer/electron-ipc": "^0.1.0",
     "@quiteer/electron-preload": "^0.0.8"
   },
   "devDependencies": {
-    "@quiteer/electron-ipc": "^0.1.0",
-    "@quiteer/electronup": "^0.3.1",
+    "@quiteer/electronup": "^0.3.4",
     "@quiteer/eslint-config": "^0.0.3",
     "@quiteer/ts-config": "^0.0.4",
     "@vitejs/plugin-vue": "^4.0.0",
