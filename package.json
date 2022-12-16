@@ -1,5 +1,5 @@
 {
-  "name": "electronup-admin",
+  "name": "electronup-app",
   "version": "1.0.0",
   "description": "electronup 生态",
   "author": "quiteer",
@@ -14,25 +14,26 @@
   },
   "main": "dist/resource/electron.js",
   "scripts": {
-    "dev": "electronup -c build/electronup.config.ts",
-    "build": "electronup build -c build/electronup.config.ts",
-    "build:option": "electronup build -c build/electronup.config.ts -o",
+    "dev": "electronup build/electronup.config.ts",
+    "dir": "electronup build build/electronup.config.ts --dir",
+    "build": "electronup build build/electronup.config.ts",
+    "build:option": "electronup build build/electronup.config.ts -o",
     "postinstall": "electron-builder install-app-deps",
     "dep:upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
     "@quiteer/electron-ipc": "^0.1.0",
-    "@quiteer/electron-preload": "^0.0.8"
+    "@quiteer/electron-preload": "^0.0.9"
   },
   "devDependencies": {
-    "@quiteer/electronup": "^0.3.4",
+    "@quiteer/electronup": "^0.4.2",
     "@quiteer/eslint-config": "^0.0.3",
-    "@quiteer/ts-config": "^0.0.4",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
+    "@youliso/electronic": "^0.0.3",
     "electron": "^22.0.0",
     "eslint": "^8.29.0",
-    "unplugin-vue-macros": "^1.0.3",
+    "unplugin-vue-macros": "^1.1.1",
     "vue": "^3.2.41"
   }
 }

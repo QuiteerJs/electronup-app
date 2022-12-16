@@ -1,7 +1,14 @@
 {
-  "extends": "@quiteer/ts-config/tsconfig.web.json",
   "compilerOptions": {
-    "composite": true
+    "composite": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "preserve",
+    "lib": [
+      "ESNext",
+      "DOM",
+      "DOM.Iterable"
+    ]
   },
   "include": [
     "render/**/*.ts",

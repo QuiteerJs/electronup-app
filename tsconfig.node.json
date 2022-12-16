@@ -1,11 +1,15 @@
 {
-  "extends": "@quiteer/ts-config/tsconfig.node.json",
   "compilerOptions": {
-    "composite": true
+    "composite": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["ESNext"],
+    "types": ["node"]
   },
   "include": [
     "build/**/*.ts",
     "main/**/*.ts",
-    "./package.json"
+    "package.json"
   ]
 }

@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
+import './styles/style.css'
 import { EventKeys, IpcWindowOptions } from '@quiteer/electron-ipc/web'
 import App from './App.vue'
 

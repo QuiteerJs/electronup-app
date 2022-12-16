@@ -19,12 +19,6 @@ app.whenReady().then(() => {
     }
   })
 
-  console.log('loadUrl: ', loadUrl)
-  console.log('NODE_ENV', process.env.NODE_ENV)
-  console.log('VITE_HELLO :>> ', process.env.VITE_HELLO)
-  console.log('VITE_MODE_TEXT :>> ', process.env.VITE_MODE_TEXT)
-  console.log('RENDER_PORT :>> ', process.env.RENDER_PORT)
-
   win.loadURL(loadUrl)
   win.webContents.openDevTools({ mode: 'right' })
 })

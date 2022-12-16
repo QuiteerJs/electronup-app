@@ -10,9 +10,12 @@ export default defineConfig((env: ConfigEnv) => {
       external: [...Object.keys(devDependencies)]
     },
     builderConfig: {
-      asar: false
-    },
-    resourceDir: 'dist/resource',
-    outDir: 'dist/out'
+      win: {
+        target: {
+          target: 'nsis',
+          arch: 'ia32'
+        }
+      }
+    }
   }
 })
