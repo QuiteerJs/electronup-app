@@ -11,4 +11,4 @@ lerna-debug.log*
 node_modules/
 dist
 out
-
+.idea

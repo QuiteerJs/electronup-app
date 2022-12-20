@@ -28,11 +28,13 @@
   "devDependencies": {
     "@quiteer/electronup": "^0.4.2",
     "@quiteer/eslint-config": "^0.0.3",
+    "@quiteer/ts-config": "^0.0.5",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
-    "@youliso/electronic": "^0.0.3",
+    "@youliso/electronic": "^0.0.5",
     "electron": "^22.0.0",
-    "eslint": "^8.29.0",
+    "eslint": "^8.30.0",
+    "naive-ui": "^2.34.2",
     "unplugin-vue-macros": "^1.1.1",
     "vue": "^3.2.41"
   }

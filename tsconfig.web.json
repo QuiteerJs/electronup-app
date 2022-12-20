@@ -1,17 +1,10 @@
 {
+  "extends": "@quiteer/ts-config/tsconfig.web.json",
   "compilerOptions": {
     "composite": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "preserve",
-    "lib": [
-      "ESNext",
-      "DOM",
-      "DOM.Iterable"
-    ]
+    "types": ["vite/client", "naive-ui/volar", "unplugin-vue-macros/macros-global"]
   },
   "include": [
-    "render/**/*.ts",
-    "typings/*.d.ts"
+    "render/**/*.ts"
   ]
 }
