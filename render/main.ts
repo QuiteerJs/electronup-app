@@ -1,12 +1,10 @@
-import { createApp } from 'vue'
 import './styles/style.css'
 import { EventKeys, IpcWindowOptions } from '@quiteer/electron-ipc/web'
-import naive from 'naive-ui'
 import { createPinia } from 'pinia'
 import App from './App.vue'
 
 const app = createApp(App)
-app.use(createPinia()).use(naive).mount('#app')
+app.use(createPinia()).mount('#app')
 
 console.log(import.meta.env)
 
