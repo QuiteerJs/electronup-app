@@ -1,13 +1,14 @@
 import { resolve } from 'path'
-import { BrowserWindow, app } from 'electron'
+import { BrowserWindow } from 'electron'
 import { Ipc } from '@quiteer/electron-ipc'
 import preload from '@quiteer/electron-preload'
+import { appInstance } from '@youliso/electronic/app'
 
 const loadUrl = process.env.NODE_ENV === 'development'
   ? `http://localhost:${process.env.RENDER_PORT}`
   : `file://${resolve(__dirname, 'index.html')}`
 
-app.whenReady().then(() => {
+appInstance.start().then(() => {
   Ipc.init()
 
   const win = new BrowserWindow({

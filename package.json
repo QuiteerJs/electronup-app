@@ -15,9 +15,10 @@
   "main": "dist/resource/electron.js",
   "scripts": {
     "dev": "electronup build/electronup.config.ts --no-minify",
-    "dir": "electronup build build/electronup.config.ts --dir",
-    "build": "electronup build build/electronup.config.ts --no-asar --no-minify --dir",
-    "build:option": "electronup build build/electronup.config.ts -o  --no-asar --no-minify",
+    "build": "electronup build build/electronup.config.ts",
+    "dir": "electronup build build/electronup.config.ts --dir --no-asar --no-minify",
+    "build:test": "electronup build build/electronup.config.ts --mode test --no-asar --no-minify",
+    "build:option": "electronup build build/electronup.config.ts -o --no-asar --no-minify",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "postinstall": "electron-builder install-app-deps",
     "dep:upgrade": "yarn upgrade-interactive --latest"
