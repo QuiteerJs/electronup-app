@@ -1,15 +1,10 @@
 {
-  "include": ["typings/*.d.ts"],
-  "exclude": [
-    "node_modules",
-    "dist"
+  "extends": "@quiteer/ts-config/tsconfig.web.json",
+  "compilerOptions": {
+  },
+  "include": [
+    "typings/*.d.ts",
+    "render/**/*"
   ],
-  "references": [
-    {
-      "path": "./tsconfig.web.json"
-    },
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

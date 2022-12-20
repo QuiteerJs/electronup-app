@@ -14,18 +14,19 @@
   },
   "main": "dist/resource/electron.js",
   "scripts": {
-    "dev": "electronup build/electronup.config.ts",
+    "dev": "electronup build/electronup.config.ts --no-minify",
     "dir": "electronup build build/electronup.config.ts --dir",
-    "build": "electronup build build/electronup.config.ts",
+    "build": "electronup build build/electronup.config.ts --no-asar --no-minify",
     "build:option": "electronup build build/electronup.config.ts -o",
+    "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "postinstall": "electron-builder install-app-deps",
     "dep:upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@quiteer/electron-ipc": "^0.1.0",
     "@quiteer/electron-preload": "^0.0.9"
   },
   "devDependencies": {
+    "@quiteer/electron-ipc": "^0.1.0",
     "@quiteer/electronup": "^0.4.2",
     "@quiteer/eslint-config": "^0.0.3",
     "@quiteer/ts-config": "^0.0.5",
@@ -35,7 +36,9 @@
     "electron": "^22.0.0",
     "eslint": "^8.30.0",
     "naive-ui": "^2.34.2",
+    "pinia": "^2.0.28",
     "unplugin-vue-macros": "^1.1.1",
-    "vue": "^3.2.41"
+    "vue": "^3.2.41",
+    "vue-tsc": "^1.0.14"
   }
 }
