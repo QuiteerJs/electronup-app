@@ -12,12 +12,6 @@ export default (root: string): ViteConfig => {
       rollupOptions: {
         output: {
           manualChunks(input, { getModuleInfo }) {
-            if (input.includes('vue'))
-              return 'vue'
-
-            if (input.includes('naive-ui'))
-              return 'naive-ui'
-
             // 打包依赖
             if (input.includes('node_modules'))
               return 'vendor'
