@@ -29,13 +29,13 @@
     "sqlite3": "^5.1.4"
   },
   "devDependencies": {
-    "@quiteer/electronup": "^0.4.3",
+    "@quiteer/electronup": "^1.0.0",
     "@quiteer/eslint-config": "^0.0.3",
     "@quiteer/ts-config": "^0.0.5",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vueuse/core": "^9.13.0",
-    "@youliso/electronic": "^0.1.1",
+    "@youliso/electronic": "^0.1.2",
     "electron": "^22.0.0",
     "electron-updater": "^5.3.0",
     "eslint": "^8.35.0",

@@ -720,12 +720,12 @@
   resolved "https://registry.yarnpkg.com/@quiteer/electron-preload/-/electron-preload-0.0.9.tgz#dd4ec0e5a2c455f10bb3b480c37e820565a08552"
   integrity sha512-KclnIjjGHTbFzgWo5AUlHFVtgEATIZI2A8ZrIs0kW6i1I7dSzAxbtzCEI4YdjG749tj3ef/j2c0OicB/eQL+oQ==
 
-"@quiteer/electronup@^0.4.3":
-  version "0.4.3"
-  resolved "https://registry.yarnpkg.com/@quiteer/electronup/-/electronup-0.4.3.tgz#1d127b4e78a5e2dccecac00c5c919c47d61abbca"
-  integrity sha512-W3JlLrmyMBAxf2rEpwHnSpxGae3cvWAP6GYZ5dXVkdNhBeMYk5tyRDq4jCY7fK1GkNmFG1TT8VoXSDOMSgoa+Q==
+"@quiteer/electronup@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@quiteer/electronup/-/electronup-1.0.0.tgz#1bef295103bf13fd68cb4a6edbbd6156bdecd517"
+  integrity sha512-Q45EiQ/01w2sjtij5kLAQvOHYAS7zquw6Ap+7lNgy9ohMNlJCwkqwNa60TCFA1D+77ptglKVlra5YpYpUA8Mkg==
   dependencies:
-    "@quiteer/resolve-config" "workspace:^*"
+    "@quiteer/resolve-config" "0.0.4"
     cac "^6.7.14"
     dotenv "^16.0.3"
     electron-builder "^23.6.0"
@@ -745,7 +745,7 @@
   dependencies:
     "@antfu/eslint-config" "^0.29.3"
 
-"@quiteer/resolve-config@workspace:^*":
+"@quiteer/resolve-config@0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@quiteer/resolve-config/-/resolve-config-0.0.4.tgz#50fc9958904c1a8a734df549b3f7c8437f9e1b03"
   integrity sha512-dg44BSgtK5KElY7fPNbTboxEmx1WlxSYyTuo5kzIxdFBEaBty2gkQV+Hs+q71PCbskDELPNgRaWXEUUXWlxEJQ==
@@ -1400,10 +1400,10 @@
   dependencies:
     vue-demi "*"
 
-"@youliso/electronic@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@youliso/electronic/-/electronic-0.1.1.tgz#72fc3bd981d56b498c01673fb3a33fdaa8924606"
-  integrity sha512-6y0VsYX9bh4A8EWA8fwaOai3AbocB7+JL48UO64ezhz2BMXMaGGIzAJY4H7WKew4tzJxA6iehNibp3CXuw674g==
+"@youliso/electronic@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@youliso/electronic/-/electronic-0.1.2.tgz#00c00175fa4ff1b4cb1bae8e31ec8823f261271a"
+  integrity sha512-cAAL2DFaqn0mqZAqqIfqQXxy56SEoz7OM2r+16kJlZHoAn3uCJqlOoHOEMi9g2N8KnSpW+ShvtyEGFhRSbyzKQ==
 
 abbrev@1:
   version "1.1.1"
