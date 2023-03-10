@@ -1,4 +1,3 @@
-import { BrowserWindow } from 'electron'
 import { Ipc } from '@quiteer/electron-ipc'
 import preload from '@quiteer/electron-preload'
 import { appInstance, logError, windowInstance } from '@youliso/electronic'
@@ -8,11 +7,12 @@ appInstance.start().then(async () => {
   Ipc.init()
 
   windowInstance.setDefaultCfg({
+    defaultLoadType: 'url',
     defaultUrl: loadUrl,
     defaultPreload: preload as string
   })
 
-  const mainId = await windowInstance.create(
+  const main = await windowInstance.create(
     {
       title: 'main',
       route: '/',
@@ -27,14 +27,14 @@ appInstance.start().then(async () => {
     }
   )
 
-  const win = BrowserWindow.fromId(mainId!)!
+  main?.webContents.openDevTools()
 
-  const childId = await windowInstance.create(
+  const child = await windowInstance.create(
     {
       title: 'child',
-      route: '/',
+      url: 'https://cn.vuejs.org/',
       headNative: true,
-      parentId: mainId
+      parentId: main?.id
     },
     {
       height: 700,
@@ -45,19 +45,22 @@ appInstance.start().then(async () => {
       }
     }
   )
-  const child = BrowserWindow.fromId(childId!)!
 
-  win.once('ready-to-show', () => {
+  child?.webContents.openDevTools()
+  main && windowInstance.load(main).catch(logError)
+  child && windowInstance.load(child)
+
+  main?.on('unmaximize', () => {
     setTimeout(() => {
-      const [x, y] = win.getPosition()
+      const [x, y] = main!.getPosition()
       console.log('x, y: ', x, y)
-      child.setPosition(x + 990, y)
-      child.show()
-    }, 1300)
+      child!.setPosition(x + 990, y)
+      child!.show()
+    }, 1000)
   })
 
-  win.on('will-move', (event, newBounds) => {
-    child.setPosition(newBounds.x + 990, newBounds.y)
+  main!.on('will-move', (event, newBounds) => {
+    child!.setPosition(newBounds.x + 990, newBounds.y)
   })
 })
   .catch(logError)
