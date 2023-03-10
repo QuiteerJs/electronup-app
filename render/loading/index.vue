@@ -19,8 +19,8 @@ onMounted(() => {
             fontWeight: 'bold',
             lineDash: [0, 200],
             lineDashOffset: 0,
-            fill: '#c6e6e8',
-            stroke: '#c0c4c3',
+            fill: 'transparent',
+            stroke: '#c4d7d6',
             lineWidth: 1
           },
           keyframeAnimation: {
@@ -39,7 +39,7 @@ onMounted(() => {
               // Stop for a while.
                 percent: 0.8,
                 style: {
-                  fill: '#648e93'
+                  fill: 'transparent'
                 }
               },
               {
@@ -58,6 +58,16 @@ onMounted(() => {
 </script>
 
 <template>
-  <div ref="chartDom" style="height:600px;" />
+  <div ref="chartDom" class="login-logo" />
 </template>
 
+<style scoped>
+.login-logo{
+  height:200px;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>

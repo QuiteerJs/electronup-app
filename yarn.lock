@@ -1405,10 +1405,10 @@
   dependencies:
     vue-demi "*"
 
-"@youliso/electronic@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@youliso/electronic/-/electronic-0.2.4.tgz#efb79c4e8b61c1b27c704340dd367095371b3bfd"
-  integrity sha512-PXG/RNiyHdMm+m5erW0Yum6JYBrrvMwvElY3oXdtkesV2xlOI9N9pni6M4mFJMgAM9xTaAuKjViiyJ1KZ6mRiA==
+"@youliso/electronic@^0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@youliso/electronic/-/electronic-0.2.5.tgz#811f34a72f3c73d35e75cffb665d44f9db6962b4"
+  integrity sha512-JQPuo+gZI/V056400VS4gpsyWA65p0EQUXrkG8DoqGNshTBjme7agRTh/6X/H8f9AtOMPVo6Gpj94MgMnSpHdw==
 
 abbrev@1:
   version "1.1.1"

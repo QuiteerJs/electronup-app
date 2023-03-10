@@ -46,17 +46,19 @@ appInstance.start().then(async () => {
     }
   )
 
-  child?.webContents.openDevTools()
-  main && windowInstance.load(main).catch(logError)
+  main && windowInstance.load(main, { openDevTools: true }).catch(logError)
   child && windowInstance.load(child)
 
+  setTimeout(() => {
+    const [x, y] = main!.getPosition()
+    console.log('x, y: ', x, y)
+    child!.setPosition(x + 990, y)
+    child?.show()
+  }, 1000)
+
   main?.on('unmaximize', () => {
-    setTimeout(() => {
-      const [x, y] = main!.getPosition()
-      console.log('x, y: ', x, y)
-      child!.setPosition(x + 990, y)
-      child!.show()
-    }, 1000)
+    const [x, y] = main!.getPosition()
+    child!.setPosition(x + 990, y)
   })
 
   main!.on('will-move', (event, newBounds) => {

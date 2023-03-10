@@ -36,7 +36,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vueuse/core": "^9.13.0",
-    "@youliso/electronic": "^0.2.4",
+    "@youliso/electronic": "^0.2.5",
     "electron": "^22.0.0",
     "electron-updater": "^5.3.0",
     "eslint": "^8.35.0",
