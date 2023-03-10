@@ -24,7 +24,7 @@ onMounted(() => {
             lineWidth: 1
           },
           keyframeAnimation: {
-            duration: 3000,
+            duration: 2000,
             loop: true,
             keyframes: [
               {

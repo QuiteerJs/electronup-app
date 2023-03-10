@@ -10,5 +10,5 @@ console.log(import.meta.env)
 setTimeout(() => {
   const app = createApp(App)
   app.use(createPinia()).mount('#app')
-}, 600)
+}, 2000)
 
