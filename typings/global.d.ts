@@ -1,6 +1,5 @@
 interface Window {
   $ipc: import('@quiteer/electron-preload').PreloadIpc
-  $clipboard: import('@quiteer/electron-preload').PreLoadPath
+  $clipboard: import('@quiteer/electron-preload').PreloadClipboard
   $webFrame: import('@quiteer/electron-preload').PreloadWebFrame
-  $path: import('@quiteer/electron-preload').PreLoadPath
 }

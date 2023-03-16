@@ -20,10 +20,7 @@ appInstance.start().then(async () => {
     },
     {
       height: 700,
-      width: 1000,
-      webPreferences: {
-        sandbox: false
-      }
+      width: 1000
     }
   )
 
@@ -39,10 +36,7 @@ appInstance.start().then(async () => {
     {
       height: 700,
       width: 400,
-      show: false,
-      webPreferences: {
-        sandbox: false
-      }
+      show: false
     }
   )
 

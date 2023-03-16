@@ -24,10 +24,10 @@
     "dep:upgrade": "yarn upgrade-interactive --latest"
   },
   "dependencies": {
-    "@quiteer/electron-ipc": "^0.1.0",
-    "@quiteer/electron-preload": "^0.0.9",
+    "@quiteer/electron-ipc": "^1.0.0",
+    "@quiteer/electron-preload": "^0.0.10",
     "echarts": "^5.4.1",
-    "sqlite3": "^5.1.4"
+    "sqlite3": "^5.1.6"
   },
   "devDependencies": {
     "@quiteer/electronup": "^1.0.0",
@@ -39,10 +39,10 @@
     "@youliso/electronic": "^0.2.5",
     "electron": "^22.0.0",
     "electron-updater": "^5.3.0",
-    "eslint": "^8.35.0",
+    "eslint": "^8.36.0",
     "naive-ui": "^2.34.3",
     "pinia": "^2.0.33",
-    "sass": "^1.58.3",
+    "sass": "^1.59.3",
     "unplugin-auto-import": "^0.15.1",
     "unplugin-icons": "^0.15.3",
     "unplugin-vue-components": "^0.24.1",
