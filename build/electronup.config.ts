@@ -7,6 +7,7 @@ export default defineConfig((env: ConfigEnv) => {
     viteConfig: viteConfigFn(env.root),
     builderConfig: {
       win: {
+        icon: 'public/icon.png',
         target: {
           target: 'nsis',
           arch: 'ia32'
