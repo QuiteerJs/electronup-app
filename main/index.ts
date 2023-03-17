@@ -1,63 +1,42 @@
 import { Ipc } from '@quiteer/electron-ipc'
 import preload from '@quiteer/electron-preload'
-import { appInstance, logError, windowInstance } from '@youliso/electronic'
+import { BrowserWindow, app } from 'electron'
 import { loadUrl } from './absolutePath'
 
-appInstance.start().then(async () => {
+app.whenReady().then(() => {
   Ipc.init()
 
-  windowInstance.setDefaultCfg({
-    defaultLoadType: 'url',
-    defaultUrl: loadUrl,
-    defaultPreload: preload as string
+  const win = new BrowserWindow({
+    height: 700,
+    width: 800,
+    webPreferences: {
+      preload: preload as string
+    }
   })
 
-  const main = await windowInstance.create(
-    {
-      title: 'main',
-      route: '/',
-      headNative: true
-    },
-    {
-      height: 700,
-      width: 1000
+  const child = new BrowserWindow({
+    parent: win,
+    height: 700,
+    width: 400,
+    show: false,
+    webPreferences: {
+      preload: preload as string
     }
-  )
-
-  main?.webContents.openDevTools()
-
-  const child = await windowInstance.create(
-    {
-      title: 'child',
-      url: 'https://cn.vuejs.org/',
-      headNative: true,
-      parentId: main?.id
-    },
-    {
-      height: 700,
-      width: 400,
-      show: false
-    }
-  )
-
-  main && windowInstance.load(main, { openDevTools: true }).catch(logError)
-  child && windowInstance.load(child)
-
-  setTimeout(() => {
-    const [x, y] = main!.getPosition()
-    console.log('x, y: ', x, y)
-    child!.setPosition(x + 990, y)
-    child?.show()
-  }, 1000)
-
-  main?.on('unmaximize', () => {
-    const [x, y] = main!.getPosition()
-    child!.setPosition(x + 990, y)
   })
 
-  main!.on('will-move', (event, newBounds) => {
-    child!.setPosition(newBounds.x + 990, newBounds.y)
+  win.loadURL(loadUrl)
+  child.loadURL('https://freegpt.one/')
+
+  // win.webContents.openDevTools({ mode: 'right' })
+  win.once('ready-to-show', () => {
+    setTimeout(() => {
+      const [x, y] = win.getPosition()
+      child.setPosition(x + 790, y)
+      child.show()
+    }, 1000)
+  })
+
+  win.on('will-move', (event, newBounds) => {
+    child.setPosition(newBounds.x + 790, newBounds.y)
   })
 })
-  .catch(logError)
-
