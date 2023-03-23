@@ -4,8 +4,6 @@ import { init } from 'echarts'
 const chartDom = ref<HTMLElement>()
 
 onMounted(() => {
-  console.log('chartDom: ', chartDom)
-
   chartDom.value && init(chartDom.value).setOption({
     graphic: {
       elements: [
@@ -64,7 +62,7 @@ onMounted(() => {
 <style scoped>
 .login-logo{
   height:200px;
-  width: 800px;
+  width: 700px;
   position: absolute;
   top: 50%;
   left: 50%;
