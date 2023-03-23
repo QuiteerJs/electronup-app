@@ -9,6 +9,8 @@ app.whenReady().then(() => {
   const win = new BrowserWindow({
     height: 700,
     width: 800,
+    useContentSize: true,
+    autoHideMenuBar: true,
     webPreferences: {
       preload: preload as string
     }
@@ -16,8 +18,9 @@ app.whenReady().then(() => {
 
   const child = new BrowserWindow({
     parent: win,
-    height: 700,
-    width: 400,
+    height: 730,
+    width: 700,
+    frame: false,
     show: false,
     webPreferences: {
       preload: preload as string
@@ -31,12 +34,12 @@ app.whenReady().then(() => {
   win.once('ready-to-show', () => {
     setTimeout(() => {
       const [x, y] = win.getPosition()
-      child.setPosition(x + 790, y)
+      child.setPosition(x + 810, y + 1)
       child.show()
     }, 1000)
   })
 
   win.on('will-move', (event, newBounds) => {
-    child.setPosition(newBounds.x + 790, newBounds.y)
+    child.setPosition(newBounds.x + 810, newBounds.y + 1)
   })
 })
