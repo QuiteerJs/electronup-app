@@ -2,7 +2,6 @@
   "compilerOptions": {
     "composite": true,
     "strict": true, // 开启所有严格的类型检查
-    "suppressImplicitAnyIndexErrors": true, // 元素隐式具有 "any" 类型，因为类型为 "string" 的表达式不能用于索引类型 "xx"
     "strictPropertyInitialization": false, // 类的实例属性必须初始化
     "isolatedModules": true,
     "resolveJsonModule": true,
