@@ -24,7 +24,7 @@ git clone https://github.com/TaiAiAc/electronup-app.git
 - 安装依赖
 
 ```bash
-yarn i
+yarn
 ```
 
 - 运行
