@@ -13,7 +13,7 @@
 ## 安装使用
 
 - 环境配置
-  **本地环境需要安装 pnpm 7.x 、Node.js 16+ 和 Git**
+  **本地环境需要安装 Node.js 16+ 、 yarn 和 Git**
 
 - 克隆代码
 
@@ -24,19 +24,19 @@ git clone https://github.com/TaiAiAc/electronup-app.git
 - 安装依赖
 
 ```bash
-pnpm i
+yarn i
 ```
 
 - 运行
 
 ```bash
-pnpm dev
+yarn dev
 ```
 
 - 打包
 
 ```bash
-pnpm build
+yarn build
 ```
 
 ### 一些便携包的相关配置参考 
