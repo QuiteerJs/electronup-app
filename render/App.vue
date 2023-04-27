@@ -7,6 +7,29 @@ import HelloWorld from './components/HelloWorld.vue'
 const changeWin = (keys: IpcWindowOptions) => {
   window.$ipc.send(EventKeys.WindowOptionsKey, keys)
 }
+
+const btns = [{
+  label: '窗口最大化',
+  key: IpcWindowOptions.MAXIMIZE
+}, {
+  label: '取消窗口最大化',
+  key: IpcWindowOptions.UNMAXIMIZE
+}, {
+  label: '窗口最小化',
+  key: IpcWindowOptions.MINIMIZE
+}, {
+  label: '窗口恢复',
+  key: IpcWindowOptions.RESTORE
+}, {
+  label: '窗口刷新',
+  key: IpcWindowOptions.RELOAD
+}, {
+  label: '窗口失去焦点',
+  key: IpcWindowOptions.BLUR
+}, {
+  label: '销毁窗口',
+  key: IpcWindowOptions.DESTROY
+}]
 </script>
 
 <template>
@@ -18,20 +41,8 @@ const changeWin = (keys: IpcWindowOptions) => {
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
-  <n-button @click="changeWin(IpcWindowOptions.MAXIMIZE)">
-    窗口最大化
-  </n-button>
-  <n-button @click="changeWin(IpcWindowOptions.UNMAXIMIZE)">
-    取消窗口最大化
-  </n-button>
-  <n-button @click="changeWin(IpcWindowOptions.MINIMIZE)">
-    窗口最小化
-  </n-button>
-  <n-button @click="changeWin(IpcWindowOptions.RESTORE)">
-    窗口恢复
-  </n-button>
-  <n-button @click="changeWin(IpcWindowOptions.RELOAD)">
-    窗口刷新
+  <n-button v-for="item in btns" :key="item.key" @click="changeWin(item.key)">
+    {{ item.label }}
   </n-button>
   <HelloWorld msg="Vite + Vue" />
 </template>
