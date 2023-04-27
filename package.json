@@ -17,9 +17,9 @@
     "dev": "electronup build/electronup.config.ts --no-minify",
     "test:dev": "yarn dev --mode test",
     "build": "electronup build build/electronup.config.ts",
-    "dir": "electronup build build/electronup.config.ts --dir --no-asar --no-minify",
-    "build:test": "electronup build build/electronup.config.ts --mode test --no-asar --no-minify",
-    "build:option": "electronup build build/electronup.config.ts -o --no-asar --no-minify",
+    "dir": "yarn build --dir --no-asar --no-minify",
+    "build:test": "yarn build --mode test --no-asar --no-minify",
+    "build:option": "yarn build -o --no-asar --no-minify",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
     "postinstall": "electron-builder install-app-deps",
     "dep:upgrade": "yarn upgrade-interactive --latest"
