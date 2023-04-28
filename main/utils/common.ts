@@ -7,4 +7,10 @@ export class Common {
     const prodUrl = `file://${resolve(__dirname, 'index.html')}`
     return Is.dev ? devUrl : prodUrl
   }
+
+  static get publicPath() {
+    const dev = resolve(__dirname, '..', '..', 'public')
+    const prod = __dirname
+    return Is.dev ? dev : prod
+  }
 }
