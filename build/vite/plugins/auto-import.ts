@@ -24,7 +24,13 @@ export default (srcPath: string) => {
         'vue-router',
         '@vueuse/core',
         {
-          'vue-router': ['RouterView', 'RouterLink']
+          'vue-router': ['RouterView', 'RouterLink'],
+          'naive-ui': [
+            'useDialog',
+            'useMessage',
+            'useNotification',
+            'useLoadingBar'
+          ]
         }
       ]
     }),
